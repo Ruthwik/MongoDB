@@ -48,7 +48,7 @@ sudo service mongod stop sudo mongod
 
 
 
-####2  Connect Master to Config servers
+####2  Connecting Master to Config servers
 
 Open a terminal (This is the first terminal in Master)
      
@@ -60,7 +60,7 @@ mongos --configdb 172.50.88.60:25020 --port 27020
 --port 27020 is the port through which you want your master to connect through.
 
 
-####3  CREATING SHARDS
+####3  Creating Shards
 
 Create /data/db 
 Give permissions:  sudo chown mongo /data/db 
