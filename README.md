@@ -1,24 +1,24 @@
-#Introduction
+# Introduction
 This project deals with the performance analysis of MongoDB in a single node and in a cluster 
 
 # MongoDB
 [MongoDB](https://en.wikipedia.org/wiki/MongoDB) is a document oriented and NoSQL database.
 
 
-#Running the Project
+# Running the Project
 
-###Importing the project into eclipse.
+### Importing the project into eclipse.
 1. In Eclipse go to File -> Import.
 2. Select Existing Projects into Workspace.
 3. Select the project location on the hardrive.
 4. Click Finish to perform the import.
 
-###Installing MongoDB on a single Node
+### Installing MongoDB on a single Node
 To install follow the steps mentioned [here](https://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/)
 
-###Creating a cluster
+### Creating a cluster
 
-#####Steps in creating a cluster
+##### Steps in creating a cluster
 1.Create config server
 
 2.Connect master to config server
@@ -32,7 +32,7 @@ To install follow the steps mentioned [here](https://docs.mongodb.org/manual/tut
  
 
 
-####1  Creating a config server
+#### 1  Creating a config server
 
 1.Install mongodb
 
@@ -48,7 +48,7 @@ sudo service mongod stop sudo mongod
 
 
 
-####2  Connecting Master to Config servers
+#### 2  Connecting Master to Config servers
 
 Open a terminal (This is the first terminal in Master)
      
@@ -60,7 +60,7 @@ mongos --configdb 172.50.88.60:25020 --port 27020
 --port 27020 is the port through which you want your master to connect through.
 
 
-####3  Creating Shards
+#### 3  Creating Shards
 
 Create /data/db 
 Give permissions:  sudo chown mongo /data/db 
@@ -70,7 +70,7 @@ Shard server waits at port 27018 by default
       Created 3 shards and same steps must be repeated in each shard
     http://docs.mongodb.org/manual/tutorial/deploy-config-servers/
 
-####4  Adding shards in master
+#### 4  Adding shards in master
 
 1. Open the terminal in the master (This is the second terminal in the master) and type mongo 172.50.88.46:27020/admin
 
